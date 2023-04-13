@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pertanyaan Programmer BackEnd</title>
+</head>
+<body>
+<p>Maaf, saya tidak pernah menggunakan Active-Record. Namun, sebagai informasi tambahan,
+  beberapa library atau framework yang menggunakan Active-Record sebagai ORM (Object-Relational Mapping) adalah Ruby on
+  Rails, Laravel (PHP), CodeIgniter (PHP), dan CakePHP (PHP).</p>
+<p>Active-Record memiliki kelebihan dalam hal memudahkan pengembangan aplikasi web karena menyediakan API yang mudah
+  digunakan untuk berinteraksi dengan database. Namun, seperti halnya dengan teknologi apapun, Active-Record juga
+  memiliki beberapa limitasi dan batasan. Salah satunya adalah kinerjanya yang bisa terpengaruh oleh kompleksitas query
+  yang dihasilkan, sehingga mungkin tidak cocok untuk aplikasi dengan skala besar atau kompleksitas tinggi. Selain itu,
+  Active-Record dapat menyembunyikan detail teknis yang mendasarinya, yang dapat mempersulit debugging dan optimasi
+  performa pada aplikasi.</p>
+<p>Namun, keputusan untuk menggunakan Active-Record atau tidak tergantung pada kebutuhan dan kondisi spesifik dari
+  proyek. Jika proyek memiliki skala besar atau kompleksitas tinggi, atau membutuhkan performa yang optimal, maka
+  mungkin lebih baik untuk mempertimbangkan penggunaan teknologi lain seperti SQL Query Builder atau ORM lain yang lebih
+  cocok untuk kebutuhan tersebut.</p>
+  <h1>Database</h1>
+	<ol>
+		<li>
+			<h3>How would you migrate an application from a database to another, for example from MySQL to PostgreSQL? If you had to manage that project, which issues would you expect to face?</h3>
+			<p>To migrate an application from one database to another, for example from MySQL to PostgreSQL, you would need to do the following:</p>
+			<ul>
+				<li>Export the data from the current database to a format that can be imported by the new database.</li>
+				<li>Create a new database in the new database management system.</li>
+				<li>Import the data into the new database.</li>
+				<li>Update the application to use the new database.</li>
+			</ul>
+			<p>Issues that might be faced during this process could include differences in syntax between the two database management systems, differences in data types and limitations of each database management system, and the need to modify the application code to be compatible with the new database.</p>
+		</li>
+		<li>
+			<h3>The so-called "N + 1 problem" is an issue that occurs when code needs to load the children of a parent-child relationship with ORMs that have lazy-loading enabled, and that therefore issues a query for the parent record, and then one query for each child record. How to fix it?</h3>
+			<p>The "N + 1 problem" can be fixed by using eager-loading instead of lazy-loading. Eager-loading allows the application to retrieve all the necessary data in a single query, instead of issuing additional queries for each child record. This can be done by using the "join" statement in SQL, or by configuring the ORM to use eager-loading.</p>
+		</li>
+		<li>
+			<h3>How would you find the most expensive queries in an application?</h3>
+			<p>You can find the most expensive queries in an application by using a profiling tool or a database monitoring tool. These tools can track the execution time of each query, and identify the queries that are taking the longest time to execute. Another way is to enable the slow query log in the database, which logs queries that take longer than a certain amount of time to execute.</p>
+		</li>
+		<li>
+			<h3>When would you use a document database like MongoDB instead of a relational database like MySQL or PostgreSQL?</h3>
+			<p>You would use a document database like MongoDB instead of a relational database like MySQL or PostgreSQL when you have unstructured or semi-structured data that needs to be stored and queried. Document databases are designed to handle data that does not fit into the rigid schema of a relational database. They are also scalable and can handle large volumes of data with ease. Additionally, document databases have flexible indexing and querying capabilities, which make them suitable for applications that require complex queries and data analysis.</p>
+		</li>
+	</ol>
+
+</body>
+</html>
